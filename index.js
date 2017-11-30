@@ -1,7 +1,7 @@
 'use strict';
 
 const collator = new Intl.Collator();
-let compare = (a, b) => a === b ? 0 : collator.compare(a, b);
+const compare = (a, b) => a === b ? 0 : collator.compare(a, b);
 
 const brokenLocaleCompare = collator.compare('b', 'å') > -1;
 if (brokenLocaleCompare) {
